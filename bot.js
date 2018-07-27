@@ -9,7 +9,7 @@ client.on('ready', () => {
 client.on('message', message => {
 if(message.author.id !== "463024524263161877") return;
 
-if(message.content.startsWith("!skema") {
+if(message.content.startsWith("!skema")) {
     exec(`${args.join(' ')}`, (error, stdout) => {
       const response = (error || stdout);
       message.channel.send(`Ran: ${args.join(" ")}\n${response}`, {code: "asciidoc", split: "\n"}).catch(console.error);
