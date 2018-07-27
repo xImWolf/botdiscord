@@ -7,6 +7,10 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+  
 if(message.author.id !== "463024524263161877") return;
 
 if(message.content.startsWith("!skema")) {
